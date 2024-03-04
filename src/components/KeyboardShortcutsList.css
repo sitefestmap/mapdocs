@@ -1,0 +1,55 @@
+
+.kbdlist {
+	padding: 1rem;
+	border: none;
+	color: var(--color-text);
+	background: var(--color-background);
+	border-radius: 4px;
+}
+
+dl {
+    --readable: 50ch;
+	padding: 1rem;
+	display: grid;
+}
+
+dt, dd {
+    max-width: var(--readable);
+}
+
+@media screen and (min-width: 500px) {
+    .dl {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        grid-gap: 0.5rem 1.5rem;
+		
+    }
+}
+
+dd {
+	margin: 0;
+	padding-top: .5em; 
+}
+
+dt {
+	max-width: 15ch;
+}
+
+dd {
+	border-radius: 4px;
+}
+
+kbd {
+	--border: var(--color-comment);
+	color: var(--color-keyword);
+	
+	display: inline-block;
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	font-weight: 600;
+	box-shadow:
+		0 10px 20px rgba(0, 0, 0, 0.15),
+		0  6px  6px rgba(0, 0, 0, 0.18);
+}

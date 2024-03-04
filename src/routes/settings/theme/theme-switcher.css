@@ -1,0 +1,119 @@
+
+.back-button {
+  background: var(--color-text);
+  float: right;
+  color: var(--color-background);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.theme-switcher-container {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 3rem 4rem;
+    margin: 1rem;
+    border: 2px solid var(--color-text);
+    box-shadow: 7px 6px 0 0 var(--color-text);
+    border-radius: var(--border-radius);
+    max-width: 90vw;
+    transition: transform 0.35s;
+  }
+  
+  .theme-switcher .container:has(button[data-theme]:active) {
+    transform: rotateZ(0.35deg);
+  } 
+  
+  .theme-switcher .container:has(button[data-theme]:nth-of-type(2n):active) {
+    transform: rotateZ(-0.35deg);
+  }
+  
+  .theme-switcher h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  
+  .theme-switcher p {
+    text-align: center;
+  }
+  
+  .theme-switcher a {
+    color: inherit;
+    text-decoration-thickness: 2px;
+  }
+  
+  .theme-switcher a:is(:hover, :focus) {
+    text-decoration-thickness: 4px;
+  }
+  
+  .theme-switcher {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.312rem;
+  }
+  
+  .theme-switcher button[data-theme] {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 0.75rem 1.25rem;
+    font-size: inherit;
+    font-size: clamp(1rem, 5vw, 1.312rem);
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+    border-radius: 0;
+  }
+  
+  .theme-switcher button[data-theme] + button[data-theme] {
+    border-left: none;
+  }
+  
+  .theme-switcher button[data-theme]:first-of-type {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }
+  
+  .theme-switcher button[data-theme]:last-of-type {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  }
+  
+  .theme-switcher button[data-theme][aria-pressed="true"] {
+    background-color: var(--color-text);
+    color: var(--color-body_background);
+  }
+  
+  .theme-switcher button[data-theme]:is(:hover, :focus) {
+    box-shadow: 0 0 0 2px var(--color-text) inset;
+  }
+  
+  .theme-switcher button[data-theme][aria-pressed="true"]:is(:hover, :focus) {
+    box-shadow: 0 0 0 2px var(--color-body_background) inset;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .theme-switcher .container {
+      padding: 1rem;
+    }
+    
+    .theme-switcher {
+      display: block;
+    }
+    
+    .theme-switcher button[data-theme] {
+      display: block;
+      margin: 0 auto;
+      border-radius: var(--border-radius);
+    }
+    
+    .theme-switcher button[data-theme]:is(:first-of-type, :last-of-type) {
+      border-radius: var(--border-radius);
+    }
+    
+    .theme-switcher button[data-theme] + button[data-theme] {
+      border-left: 2px solid var(--color-text);
+      margin-top: 1rem;
+    }
+  }
+

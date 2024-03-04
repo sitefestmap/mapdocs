@@ -1,0 +1,23 @@
+import { Backlinks } from 'components';
+export const title = 'Colors Data';
+export const backlinks = [
+    { title: 'Data', url: 'data' },
+    { title: 'Themes', url: 'themes' },
+]
+
+# {title}
+
+<Backlinks backlinks={backlinks}/>
+
+Colors for the 5 valleys + town center sections. In development, using a color format such as oklch (Lightness Chroma Hue) a consistent palette can be logically created, for example, by keeping the lightness and chroma (saturation) values the same globally but changing the hue value for different colors. This can also work using HSL (Hue Saturation Lightness) format but the percieved lightness is not as consistent when changing hues as oklch.
+
+```javascript
+export const red = '#f84d4d';      // oklch(66.2% 0.208 24.85)
+export const mid_blue = '#4264fb'; // oklch(57.1% 0.227 268.34)
+export const blue = '#40546a';     // oklch(43.8% 0.044 251.23)
+export const orange = '#f79640';   // oklch(76.0% 0.152 58.51)
+export const purple = '#7753eb';   // oklch(56.6% 0.217 288.33)
+export const green = '#207a4b';    // oklch(51.5% 0.112 155.65)
+```
+
+*TODO: consistent relative oklch values*

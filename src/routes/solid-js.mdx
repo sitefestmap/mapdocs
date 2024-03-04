@@ -1,0 +1,38 @@
+import { Backlinks, LinkList, SolidDemo } from 'components';
+export const title = 'Solid JS Framework';
+export const backlinks = [
+    { title: 'Map Frameworks', url: 'map-frameworks' },
+]
+export const links = [
+    { title: 'Solid Hack', url: 'https://hack.solidjs.com', icon: 'solid.png' },
+    { title: 'Solid Jobs', url: 'https://rrjanbiah.github.io/solidjs-jobs/#/', icon: 'web.png' },
+    { title: 'Solid JS',  url: 'https://solidjs.com', icon: 'solid.png', },
+    { title: 'Solid JS Playground', url: 'https://playground.solidjs.com', icon: 'solid.png' },
+    { title: 'Solid MapGl', url: 'https://gis-hub.gitbook.io/solid-map-gl', icon: 'solidmapgl.png' }, // https://codesandbox.io/p/sandbox/solid-maps-51fwnj?file=%2Findex.html
+    { title: 'Solid Playground CM', url: 'https://solid-playground-cm.vercel.app', icon: 'solid.png' },
+    { title: 'Solid JS Resources', url: 'https://solidjs.framework.dev', icon: 'frameworkdev.png' },
+    { title: 'Solid Start', url: 'https://start.solidjs.com', icon: 'solid.png' },
+]
+
+# {title}
+
+<Backlinks backlinks={backlinks}/>
+
+There are some examples in the docs of how the map site might be coded in a JavaScript framework. Solid JS is used but there are also other frameworks that have Mapbox adapters such as Svelte and React.
+
+```bash
+# https://github.com/birkskyum/solid-maplibre
+# https://github.com/GIShub4/solid-map-gl
+npm i mapbox-gl solid-map-gl
+
+# Solid Start
+pnpm create solid && pnpm i && \
+pnpm add mapbox-gl solid-map-gl && \
+pnpm dev
+```
+
+<LinkList links={links}/>
+
+<div style="height:100vh;position:absolute;width:80%;"> 
+    <SolidDemo />
+</div>

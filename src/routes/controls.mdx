@@ -1,0 +1,30 @@
+import { Backlinks, LinkList } from 'components';
+export const title = 'Controls';
+export const backlinks = [
+    { title: 'Export', url: 'export-control' },
+    { title: 'Infobox', url: 'infobox-control' },
+    { title: 'Popups', url: 'popup-controls' },
+    { title: 'Search', url: 'search' },
+]
+export const links = [
+    { title: 'Mapbox Controls Demo', url: 'https://korywka.github.io/mapbox-controls/preview/', icon: 'mapbox.png' }
+] // https://docs.mapbox.com/mapbox-gl-js/api/markers
+
+# {title}
+
+<Backlinks backlinks={backlinks}/>
+
+There a number of UI Controls that can be added via Mapbox APIs. The current ones we have are:
+
+- Zoom Buttons.
+- Search Input.
+- Location Button.
+- Directions Button for Driving / Walking / Cycling routes.
+- Popups.
+
+Additional controls available are: 
+
+- Style changer button.
+- Export button.
+
+*TODO: more controls*

@@ -1,0 +1,6 @@
+- Modifiers for abstractions baked into components.
+- All HTML classes should be utilities, applicable anywhere in the document.
+- Naming: classes live in the Content Layer, and should have content related class.
+- Use as a last resort.
+- Use Tailwind as a Utility class generator, not to create whole site.
+- Decouple from your design system.

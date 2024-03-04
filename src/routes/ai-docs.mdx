@@ -1,0 +1,11 @@
+import { Backlinks } from 'components';
+export const title = 'AI Docs';
+export const backlinks = [
+    { title: 'MapGPT', url: 'mapgpt' }, // https://github.com/supabase/supabase/tree/master/supabase/functions/ai-docs
+] // https://supabase.com/blog/chatgpt-supabase-docs
+
+# {title}
+
+<Backlinks backlinks={backlinks}/>
+
+We could implement AI docs, so that a user can press a help button or 'CMD /' to bring up a chatbot. Rather than using data from the web the AI is trained on internal data via markdown files etc.

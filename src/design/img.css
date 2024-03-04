@@ -1,0 +1,6 @@
+
+img {
+    & [loading="lazy"] {
+        background-color: var(--img-placeholder-color)
+    }
+}

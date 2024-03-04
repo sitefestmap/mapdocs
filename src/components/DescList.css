@@ -1,0 +1,22 @@
+   
+.desc-list {
+    --readable: 50ch;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 0.5rem 1.5rem;
+    padding: 1rem;
+    background: var(--color-background);
+    border-radius: 4px;
+}
+
+
+.desc-list .dd {
+    max-width: var(--readable);
+    padding-top: .4em;
+}
+
+.desc-list .dt {
+    max-width: 15ch;
+    padding: .5rem;
+    color: var(--color-keyword);
+}

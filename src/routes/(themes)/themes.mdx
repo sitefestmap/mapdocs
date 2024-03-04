@@ -1,0 +1,23 @@
+import { Backlinks, LinkList } from 'components';
+export const title = 'Themes';
+
+export const backlinks = [
+    { title: 'Map Style Switcher', url: 'map-style-switcher' },
+    { title: 'Theme Switcher', url: 'theme-switcher' },
+]
+export const links = [
+    { title: 'Maplibre Style', url: 'https://birkskyum.github.io/maplibre-style', icon: 'web.png' },
+]/*
+    https://docs.mapbox.com/style-spec/
+    https://docs.mapbox.com/mapbox-gl-js/guides/styles
+*/
+
+# {title}
+
+<Backlinks backlinks={backlinks}/>
+
+Link to demos of mapbox themes. The accessibility of the current theme could be improved, or swapped out for a different theme.
+
+*TODO : dark/light mode changes mapbox themes?*
+
+<LinkList links={links}/>

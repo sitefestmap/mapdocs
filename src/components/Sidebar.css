@@ -1,0 +1,32 @@
+.with-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.sidebar {
+    flex-basis: 12rem; /*flex-basis: 1080px; */
+    flex-grow: 1;
+    border-right: 1px solid var(--theme-colors-greydivider);
+}
+
+.not-sidebar {
+    flex-basis: 0;
+    flex-grow: 999;
+    /* narrowest main content */
+    min-inline-size: 80%;
+    height: 100%
+}
+
+.sidebar nav {
+    padding: 1rem 0 0 0;        
+    display: grid;
+    justify-items: center; 
+}
+
+@media screen and (min-width: 1008px) {
+    .sidebar nav {
+        padding-top: 0;
+        justify-items: left;
+    }
+}

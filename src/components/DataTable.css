@@ -1,0 +1,133 @@
+.table-container {
+    overflow-x: auto;
+    
+}
+
+caption {
+    font-size: 1.3rem;
+    padding: .5rem;
+}
+
+table {
+    margin: 0 auto;
+    /* width: 100%; */
+    border-spacing: 0;
+    /* Edge and IE up to 11 suppress box-shadow in tables with border-collapse:collapse	*/
+    /* border-collapse: collapse; */
+    border-radius: 0.5rem;
+    /*	box-shadow: 
+    0 0 0 1px rgba(0,0,0.08),
+    0 1px 4px rgba(0,0,0.05),
+    0 2px 25px rgba(0,0,0,0.1); */
+}
+
+th, td {
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0.375em 0.875em;
+}
+
+thead th:first-child {
+    border-radius: 0.5em 0 0 0;
+}
+
+thead th:last-child {
+    border-radius: 0 0.5em 0 0;
+}
+
+tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 0.5em;
+}
+
+tbody tr:last-child td:last-child {
+    border-radius: 0 0 0.5em 0;
+}
+
+thead tr *,
+td:first-child {
+    border-color: hsl(0, 0%, 25%); 
+    background-color: var(--theme-colors-text);
+    color: var(--theme-colors-background);
+}	
+
+:global(td:first-child code) {
+    color: var(--theme-colors-background_code);
+}
+
+/*span {display: none} old version */
+caption {text-align: left;} 
+
+
+/*
+	OLD VERSION : replace with DL
+
+@media only screen and (max-width: 760px)
+	// , (min-device-width: 768px) and (max-device-width: 1024px) 
+{
+
+	article {
+		display: grid;
+		place-items: center;		
+	}
+	//table { width: 100%;}
+	table {
+		box-shadow: none;
+		border-collapse: collapse;
+	}
+						
+	table tbody td:last-child {
+		border-radius: 0 0 0.5em 0.5em;
+	}
+			
+	table tbody td:first-child {
+		border-radius: 0.5em 0.5em 0 0;
+	}
+				
+	table tbody tr:last-child td:first-child {
+		border-radius:  0.5em 0.5em 0 0;
+	}
+			
+	table tbody tr:last-child td:last-child {
+		border-radius: 0 0 0.5em 0.5em ;
+	}
+			
+	tr {
+		border-radius: 0.5em;
+	}
+					
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+		
+	caption {
+		display: grid;
+		place-items: center;
+	}
+			
+	thead tr {
+		position: absolute;
+		left: -9999px;
+		top: -9999px;
+	}
+			
+	tr { 
+		border: 1px solid #ccc; 
+		border-radius: 0.5;
+		margin-bottom: 1rem;
+	}
+			
+	// make 'row' behaviour
+	td {
+		border: none;
+		position: relative;
+		padding-left: 50%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+			
+	td span {
+		display: inline;
+		padding-right: 2rem;
+	}	
+}
+*/

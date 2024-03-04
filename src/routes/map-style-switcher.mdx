@@ -1,0 +1,16 @@
+import { Backlinks } from 'components';
+export const title = 'Map Style Switcher';
+export const backlinks = [
+    { title: 'Theme Switcher', url: 'theme-switcher' },
+    { title: 'Themes', url: 'themes' },
+] // https://codesandbox.io/p/sandbox/elegant-night-wi9v4?file=%2Fsrc%2Findex.ts
+
+# {title}
+
+<Backlinks backlinks={backlinks}/>
+
+It is possible to install a button to use in the UI that switches the mapbox style.
+
+```bash
+npm i mapbox-gl-style-switcher --save
+```

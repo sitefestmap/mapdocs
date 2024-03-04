@@ -1,0 +1,29 @@
+import { LinkList, Backlinks } from 'components';
+export const title = 'Map Frameworks'
+export const backlinks = [
+    { title: 'Map', url: 'map' },
+]
+export const links = [
+    { title: 'GeoJSON', tags:'maps', url:'https://geojson.io', icon: 'geojson.png' },
+    { title: 'Leaflet JS', tags:'maps', url:'https://leafletjs.com', icon: 'leaflet.png' },
+    { title: 'Maps for HTML', tags:'maps', url:'https://maps4html.org', icon: 'maps4html.png' },
+    { title: 'Mapbox', url: 'https://www.mapbox.com', icon: 'mapbox.png' },
+    { title: 'MapLibre', url: 'https://maplibre.org', icon: 'maplibre.png' }, // https://demotiles.maplibre.org/
+    { title: 'Mapshaper', tags:'maps', url:'https://mapshaper.org', icon: 'mapshaper.png' },
+    { title: 'Maptiler', url: 'https://www.maptiler.com/', icon: 'maptiler.png' },
+    { title: 'Maputnik', url: 'https://maputnik.github.io', icon: 'maputnik.png' },
+    { title: 'Open Layers', url: 'https://openlayers.org', icon: 'openlayers.png' },
+    { title: 'React MapboxGl', url: 'https://alex3165.github.io/react-mapbox-gl/', icon: 'web.png' },
+    { title: 'Solid MapGl', url: 'https://gis-hub.gitbook.io/solid-map-gl', icon: 'solidmapgl.png' }, // https://codesandbox.io/p/sandbox/solid-maps-51fwnj?file=%2Findex.html
+    { title: 'To Geo JSON', tags:'json, maps', src:'Mapbox', url:'https://mapbox.github.io/togeojson', icon: 'web.png' },
+    // 	{ title:'Google Maps API', tags:'maps', url:'https://developers.google.com/maps/documentation/javascript/reference' },
+ //  { title:'How To Use Mapbox To Create A Google Maps Clone Quickly', tags:'maps, mapbox', src:'Web Dev Simplified', url:'https://www.youtube.com/watch?v=OySigNMXOZU' },
+] // https://github.com/birkskyum/solid-maplibre  https://postgis.net/ https://revolutionarygis.wordpress.com/  https://protomaps.com/
+
+# {title}
+
+<Backlinks backlinks={backlinks}/>
+
+Some links for various Mapping stuff.
+
+<LinkList links={links}/>

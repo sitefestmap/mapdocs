@@ -1,0 +1,39 @@
+.logo a {
+    display: flex;
+    font-family: monaco;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+    background-color: var(--color-background);
+}
+
+.logo svg:hover {
+    fill: var(--color-string);
+}
+
+.logo svg {
+    fill: var(--color-text, initial);
+    background-color: var(--color-background);
+}
+
+.logo {
+    padding: .2rem;
+    background-color: var(--color-background);
+}
+
+.logo-container {
+    width: 3.5rem;
+    height: 1rem;
+    padding: .2rem .5rem;
+    background-color: var(--color-background);
+}
+
+.logo span {
+    background-color: var(--color-background);
+    font-weight: bold;
+}
+
+[href="/"] {
+    background-color: var(--color-background) !important;
+}
