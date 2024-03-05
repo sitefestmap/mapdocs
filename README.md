@@ -4,6 +4,8 @@ Docs for 2023 site and a few ideas for potential 2024 additions.
 
 WIP: Will add more content over next weeks.
 
+Will put on subdomain soon. [Mapdocs](https://mapdocs.sitefestival.org.uk)
+
 ## Make a Pull request
 
 [Map Docs](https://github.com/sitefestmap/mapdocs/pulls)
