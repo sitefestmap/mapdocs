@@ -1,43 +1,51 @@
-
-import { createSignal } from "solid-js";
-import MapGL, { Viewport, Source, Layer } from "solid-map-gl";
-import 'mapbox-gl/dist/mapbox-gl.css'
-
+import { createSignal } from 'solid-js';
+import MapGL, {
+  Viewport,
+  Source,
+  Layer,
+  Camera,
+  Atmosphere,
+} from 'solid-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 export function SolidDemo() {
     const [viewport, setViewport] = createSignal({
-        center: [-122.45, 37.78],
-        zoom: 11,
-    } as Viewport);
-
-    return (
+        center: [140, -10],
+        zoom: 2,
+      } as Viewport);
+    const [rotation, setRotation] = createSignal(true);
+    
+    return(
         <MapGL
-            options={{
-                accessToken: 'pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqaTNwbXY5NjUzdWgzYSJ9.af8OJ3gOuIiOvKkYllihGQ',
-                style: "mb:light",
-            }}
+            options={{ style: 'mb:outdoor', projection: 'globe', accessToken: 'pk.eyJ1IjoibWF0dGhpYXN3ZXN0b24iLCJhIjoiY2xlNHIya255MDJqaTNwbXY5NjUzdWgzYSJ9.af8OJ3gOuIiOvKkYllihGQ', }}
             viewport={viewport()}
-            onViewportChange={(evt: Event) => setViewport(evt)}
+            onViewportChange={(evt: Viewport) => setViewport(evt)}
+            onUserInteraction={() => null}
         >
+         
+            <Camera rotateGlobe={rotation()} />
+            <Atmosphere />
             <Source
-                source={{
-                type: "geojson",
-                data: "https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson",
-                }}
+            source={{
+                type: 'geojson',
+                data: 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson',
+            }}
             >
                 <Layer
+                    // Using simplified styles
                     style={{
-                        type: "circle",
-                        source: "earthquakes",
-                        paint: {
-                        "circle-radius": 8,
-                        "circle-color": "red",
-                        },
+                        type: 'circle',
+                        radius: ['*', ['get', 'mag'], 2],
+                        color: ['match', ['get', 'tsunami'], 0, '#F00', 1, '#03A', '#CCC'],
+                        opacity: 0.5,
+                        strokeWidth: 0.25,
+                        pitchAlignment: 'map',
                     }}
+                    beforeType="symbol"
                 />
             </Source>
         </MapGL>
-    );
+    )
 };
 
-//render(() => <App />, document.getElementById("app")!);
+
