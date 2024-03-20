@@ -1,0 +1,3 @@
+- For in-build elements, there is just an ElementName.css file.
+- Do as much CSS in elements/attributes
+- Don't repeat elements as components ie Header Footer Heading etc.

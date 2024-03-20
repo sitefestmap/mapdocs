@@ -1,0 +1,23 @@
+pre {
+    margin: 1rem;
+    padding: 1rem;
+    line-height: 1.4;
+    border-radius: 5px;
+    max-height: 100%;
+    overflow-y: auto;
+    tab-size: 4;
+    line-height: 1.5;
+}
+
+.code-container {
+    padding: 1rem;
+    background-color: var(--color-background);
+    border-radius: 0 5px 5px 5px;   
+    overflow-x: auto;
+}
+
+code { 
+    p & { 
+        color: var(--color-keyword);
+    }
+}

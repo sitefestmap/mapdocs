@@ -1,4 +1,3 @@
-//import './LinkList.css';
 import { For } from 'solid-js';
 
 type Link = {
@@ -16,27 +15,26 @@ interface LinkListProps {
 export function LinkList(props: LinkListProps) {
     const { links } = props;
     return (
-        <div class="link-list">
-            <ul>
-                <For each={links}>
-                    {(link) => (
-                        <li>
-                            <img 
-                                src={`/link-favicons/${link.icon}`} 
-                                alt=""
-                                loading="lazy"
-                            />
-                            <a 
-                                class="title"
-                                href={link.url} 
-                                target="_blank">
-                                {link.title}
-                                {link.src ? <span>({link.src})</span> : null}
-                            </a>
-                        </li>
-                    )}   
-                </For>
-            </ul>
-        </div>
+        <ul class="pl-0">
+            <For each={links}>
+                {(link) => (
+                    <li class="flex list-none mt-1 pl-2">
+                        <img 
+                            src={`/link-favicons/${link.icon}`} 
+                            alt=""
+                            loading="lazy"
+                            class="mr-1 p-1 h-6 w-6 border-2 border-[var(--color-comment)] rounded-full"
+                        />
+                        <a 
+                            class="flex flex-wrap align-items-center no-underline p-0 pl-1 hover:text-[var(--color-string)] after:inline-block after:w-6 after:pl-1 border-b-2 border-transparent hover:border-b-2 hover:border-[var(--color-string)] hover:mr-0 hover:after:content-extLinkIcon"
+                            href={link.url} 
+                            target="_blank">
+                            {link.title}
+                            {link.src ? <span class="pl-1 text-[var(--color-text)]">({link.src})</span> : null}
+                        </a>
+                    </li>
+                )}   
+            </For>
+        </ul>
     );
 }

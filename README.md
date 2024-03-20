@@ -21,3 +21,12 @@ pnpm dev
 ```
 
 The Docs are using an outdated version of SolidStart, updating the Shiki config is a bit tricky at the mo but will work on it soon.
+
+
+## DNS
+
+- 123reg CNAME mapdocs mapdocs.fly.dev
+
+```bash
+flyctl certs create mapdocs.sitefestival.org.uk
+```

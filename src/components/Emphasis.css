@@ -1,0 +1,9 @@
+/* TODO */
+em {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 3px;
+    margin: 1rem 0 0 1rem;
+    border-left: 4px solid var(--color-string_expression);
+    background-color: var(--color-background);
+}

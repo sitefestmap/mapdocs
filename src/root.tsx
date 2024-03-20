@@ -44,8 +44,8 @@ export default function Root() {
             <Body>
                 <ErrorBoundary>
                     <Suspense>
-                        <header>
-                            <nav>
+                        <header class="bg-[var(--color-background)] border-[var(--color-greydivider)] border-b-2">
+                            <nav class="flex items-center justify-between py-4 px-0">
                                 <Logo />
                                 <a href="https://sitefestival.org.uk" target="_blank">Site</a>
                                 <a href="https://map.sitefestival.org.uk/index.html" target="_blank">Map</a>

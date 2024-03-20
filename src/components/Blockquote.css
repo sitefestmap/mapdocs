@@ -1,0 +1,12 @@
+blockquote {
+    font-family: georgia;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 3px;
+    border-left: 4px solid var(--color-string_expression);
+    margin-top: 1rem;
+    background-color: var(--color-background);
+
+    &::before { content: open-quote;  display: inline; }
+    &::after  { content: close-quote; display: inline; }
+}

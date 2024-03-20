@@ -1,0 +1,188 @@
+:where(html) {
+    --ratio: 1.4;
+    --s-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+    --s-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
+    --s0: clamp(1rem, 1rem + -0vw, 1rem);
+    --s1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
+    --s2: clamp(0.64rem, 0.69rem + 0.85vw, 2rem);
+    
+    --line-height: var(--ratio);
+    --line-height-small: calc(0.8 * var(--ratio));
+    --modal-width: max(50%, 20rem); /* no work */
+
+    /* SHIKI */
+    --shiki-color-text: var(--color-text);
+    --shiki-color-background:  var(--color-background);
+    --shiki-token-constant:  var(--color-constant);
+    --shiki-token-string:  var(--color-string);
+    --shiki-token-comment:  var(--color-comment);
+    --shiki-token-keyword:  var(--color-keyword);
+    --shiki-token-parameter:  var(--color-parameter);
+    --shiki-token-function:  var(--color-function);
+    --shiki-token-string-expression:  var(--color-string_expression);
+    --shiki-token-punctuation:  var(--color-punctuation);
+    --shiki-token-link:  var(--color-link);
+
+    --colour-brand: hsl(193 67% 34%); /* elm */
+    --colour-light: hsl(7 53% 97%); /* fantasy */
+  
+    --colour-code-line-numbers: hsl(219 14% 71% / 0.8);
+    --colour-code-line-highlight: hsl(34 96% 55%);
+    --colour-code-background-hue: 220;
+    --colour-code-background-saturation: 13%;
+    --colour-code-background-lightness: 18%;
+    --colour-code-background-highlighted: hsl(
+      var(--colour-code-background-hue) var(--colour-code-background-saturation)
+        calc(var(--colour-code-background-lightness) + 5%)
+    );
+  
+    --spacing-px: 1px;
+    --spacing-px-2: 2px;
+    --spacing-0: 0;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-4: 1rem;
+    --spacing-6: 1.5rem;
+    --spacing-12: 3rem;
+    --spacing-18: 4.5rem;
+    --max-width-wrapper: 48rem;
+    --max-width-full: 100%;
+  
+    --font-size-root: 16px;
+    --font-size-3: 1.563rem;
+    --font-size-4: 1.953rem;
+    --font-size-5: 2.441rem;
+    --font-size-6: 3.052rem;
+  
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+  
+    --line-height-normal: 1.5;
+  
+    /* CREDIT: https://www.joshwcomeau.com/shadow-palette/ */
+    --shadow-color: 194deg 84% 18%;
+    --shadow-elevation-medium: -1px 1px 1.6px hsl(var(--shadow-color) / 0.36),
+      -3.3px 3.3px 5.3px -0.8px hsl(var(--shadow-color) / 0.36),
+      -8.2px 8.2px 13px -1.7px hsl(var(--shadow-color) / 0.36),
+      -20px 20px 31.8px -2.5px hsl(var(--shadow-color) / 0.36);
+}   
+
+:root, /* default */
+[data-selected-theme="moon"] {
+    --color-body_background: 
+        oklch(35% 0.001 17);
+    --color-background: 
+        oklch(30% 0.001 17);
+    --color-text: 
+        oklch(80% 0.001 264.46); 
+    --color-function: 
+        oklch(99% 0.001 17);
+    --color-comment: 
+        oklch(60% 0.001 260);
+    --color-string: 
+        oklch(80% 0.109 144);
+    --color-string_expression: 
+        oklch(80% 0.12 249);
+    --color-constant: 
+        oklch(80% 0.09 197); 
+    --color-keyword: 
+        oklch(94% 0.09 96);
+    --color-parameter: 
+        oklch(88.8% 0.120 84.66); /* attribute */
+    --color-punctuation: 
+        oklch(66.0% 0.080 80.10); /* operator */
+    --color-link: 
+        oklch(66.1% 0.080 79.30);
+    --color-greydivider: 
+        oklch(35% 0.001 17);
+}
+
+[data-selected-theme="owl"] {
+    --color-body_background: 
+        oklch(24% 0.055 246.11);
+    --color-background: 
+        oklch(21% 0.047 245.39);
+    --color-text: 
+        oklch(90% 0.020 260.17);
+    --color-comment: 
+        oklch(55% 0.024 196.49);
+    --color-string: 
+        oklch(84% 0.084 75.06);
+    --color-string_expression: 
+        oklch(84% 0.084 75.06);
+  /* --color-constant: #82AAFF',  built; */
+    --color-constant: 
+        oklch(74% 0.131 264.28); /* us; */
+    --color-keyword: 
+        oklch(74% 0.135 311.06);
+    --color-function: 
+        oklch(74% 0.135 311.06);
+    --color-parameter: 
+        oklch(83% 0.092 180.70); /*variabel parameter functi; */
+    --color-punctuation: 
+        oklch(83% 0.092 180.70); /* mata t; */
+    --color-link: 
+        oklch(83% 0.092 180.70);
+    --color-greydivider: 
+        oklch(31.3% 0.001 17);
+}
+
+/* https://ethanschoonover.com/solarized/ */
+[data-selected-theme="solar"] {
+    --color-background: 
+        oklch(93.9% 0.057 89.65);
+    --color-body_background: 
+        oklch(95.7% 0.041 88.79);
+    --color-text: 
+        oklch(56.8% 0.029 221.90);
+    --color-comment: 
+        oklch(69.8% 0.016 196.79);
+    --color-string: 
+        oklch(64.4% 0.102 187.38);
+    --color-string_expression: 
+        oklch(64.4% 0.102 187.38);
+  /* --color-keyword: #859900'; */
+    --color-keyword: 
+        oklch(58.2% 0.126 279.10);
+    --color-function: 
+        oklch(61.5% 0.139 244.93);
+  /* --color-constant: #B58900; */
+    --color-parameter: 
+        oklch(61.5% 0.139 244.93);
+    --color-punctuation: 
+        oklch(58.6% 0.206 27.12);
+    --color-link: 
+        oklch(63.6% 0.103 233.17);
+    --color-greydivider: 
+        oklch(93.3% 0.002 17);
+}
+
+[data-selected-theme="dracula"] {
+    --color-text: 
+        oklch(96.7% 0.013 106.64);
+    --color-body_background: 
+        oklch(30.4% 0.024 274.74);
+    --color-background: 
+        oklch(26.7% 0.019 276.18);
+    --color-constant: 
+        oklch(74.7% 0.146 302.37);
+    --color-string: 
+        oklch(95.5% 0.137 112.71);
+    --color-comment: 
+        oklch(55.6% 0.082 269.51);
+    --color-keyword: 
+        oklch(75.6% 0.182 346.93);
+    --color-parameter: 
+        oklch(83.4% 0.125 66.88);
+    --color-function: 
+        oklch(87.2% 0.218 148.03);
+    --color-string_expression: 
+        oklch(95.5% 0.137 112.71);
+    --color-punctuation: 
+        oklch(75.6% 0.182 346.93);
+    --color-link: 
+        oklch(74.7% 0.146 302.37);
+    --color-greydivider: 
+        oklch(31.0% 0.001 17.23);
+}

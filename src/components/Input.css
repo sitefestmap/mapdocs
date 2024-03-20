@@ -1,0 +1,18 @@
+input {
+    font: inherit;
+
+    /*
+    & [id="toggle] {
+    
+    }
+    */
+}
+
+[id="toggle"] {
+    font-size: var(--s1);
+    margin-top: var(--s1);
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
