@@ -19,7 +19,7 @@
     --shiki-token-keyword:  var(--color-keyword);
     --shiki-token-parameter:  var(--color-parameter);
     --shiki-token-function:  var(--color-function);
-    --shiki-token-string-expression:  var(--color-string_expression);
+    --shiki-token-string-expression:  var(--color-string-expression);
     --shiki-token-punctuation:  var(--color-punctuation);
     --shiki-token-link:  var(--color-link);
 
@@ -82,7 +82,7 @@
         oklch(60% 0.001 260);
     --color-string: 
         oklch(80% 0.109 144);
-    --color-string_expression: 
+    --color-string-expression: 
         oklch(80% 0.12 249);
     --color-constant: 
         oklch(80% 0.09 197); 
@@ -109,7 +109,7 @@
         oklch(55% 0.024 196.49);
     --color-string: 
         oklch(84% 0.084 75.06);
-    --color-string_expression: 
+    --color-string-expression: 
         oklch(84% 0.084 75.06);
   /* --color-constant: #82AAFF',  built; */
     --color-constant: 
@@ -140,7 +140,7 @@
         oklch(69.8% 0.016 196.79);
     --color-string: 
         oklch(64.4% 0.102 187.38);
-    --color-string_expression: 
+    --color-string-expression: 
         oklch(64.4% 0.102 187.38);
   /* --color-keyword: #859900'; */
     --color-keyword: 
@@ -177,7 +177,7 @@
         oklch(83.4% 0.125 66.88);
     --color-function: 
         oklch(87.2% 0.218 148.03);
-    --color-string_expression: 
+    --color-string-expression: 
         oklch(95.5% 0.137 112.71);
     --color-punctuation: 
         oklch(75.6% 0.182 346.93);

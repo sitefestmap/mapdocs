@@ -1,6 +1,7 @@
 import { For, createEffect, createSignal } from 'solid-js';
 import { A } from 'solid-start';
 import './Menu.css'
+// Fix: 2 navs
 
 type MenuItem = {
     title: string;
@@ -37,7 +38,7 @@ export default function Menu(props: MenuItemsProps) {
 
     return (
         <div 
-            class="lg:absolute lg:max-h-screen p-1 rounded lg:rounded-none overflow-y-auto bg-[var(--color-background)] border-r-2 border-[var(--color-greydivider)]" 
+            class="lg:absolute lg:max-h-screen p-1 rounded lg:rounded-none overflow-y-auto bg-[--color-background] border-r-2 border-[--color-greydivider]" 
             aria-labelledby="nav-label"
         >
             <input 
@@ -55,7 +56,7 @@ export default function Menu(props: MenuItemsProps) {
                 class="lg:hidden flex items-center place-content-center m-0"
             >
                 <svg 
-                    class="icon w-3 h-3 stroke-[var(--color-text)] stroke-width-2 fill-none" 
+                    class="icon w-3 h-3 stroke-[--color-text] stroke-width-2 fill-none" 
                     viewBox="0 0 32 32">
                     <path d="M3,3 29,3 M3,16 29,16 M3,29 29,29"></path>
                 </svg>
@@ -71,7 +72,7 @@ export default function Menu(props: MenuItemsProps) {
             >
                 <div class="mt-0 p-0 h-full">
                     <input
-                        class="relative p-2 m-1 max-w-44 bg-[var(--color-background)] text-[var(--color-text)] border-[var(--color-text)] border-2 rounded"
+                        class="relative p-2 m-1 max-w-44 bg-[--color-background] text-[--color-text] border-[--color-text] border-2 rounded"
                         type="text"
                         value={filterText()}
                         onInput={(e) => {
@@ -83,10 +84,10 @@ export default function Menu(props: MenuItemsProps) {
                         <For each={filteredItems()}>
                             {(menuitem) => (
                                 <div 
-                                    class="relative m-1 p-2 border-[var(--color-greydivider)] border-2" 
+                                    class="relative m-1 p-2 border-[--color-greydivider] border-2" 
                                     onClick={handleClick}
                                 >
-                                    <A href={`/${menuitem.url}`} class="inline-block mt-1 text-align-left max-w-32">
+                                    <A href={`/${menuitem.url}`} class="inline-block mt-1 text-align-left max-w-36">
                                         <span class="title">{menuitem.title}</span>
                                     </A>
                                 </div>

@@ -68,6 +68,9 @@ dependencies:
   openai:
     specifier: ^4.24.1
     version: 4.24.1
+  postcss-import:
+    specifier: ^16.0.1
+    version: 16.0.1(postcss@8.4.32)
   rehype-raw:
     specifier: ^7.0.0
     version: 7.0.0
@@ -151,9 +154,6 @@ devDependencies:
   postcss:
     specifier: ^8.4.32
     version: 8.4.32
-  postcss-import:
-    specifier: ^16.0.1
-    version: 16.0.1(postcss@8.4.32)
   postcss-nested:
     specifier: ^6.0.1
     version: 6.0.1(postcss@8.4.32)
@@ -8149,7 +8149,7 @@ packages:
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.8
-    dev: true
+    dev: false
 
   /postcss-js@4.0.1(postcss@8.4.32):
     resolution: {integrity: sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==}

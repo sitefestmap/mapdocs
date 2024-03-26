@@ -5,7 +5,7 @@ import './theme-switcher.css'
 function BackButton() {
     const navigate = useNavigate();
     const goBack = () => { navigate(-1) }  
-    return (<button onClick={goBack} class="back-button">&times;</button>)
+    return (<button onClick={goBack} class="back-button p-2 rounded">&times;</button>)
 };
 
 export function ThemeSwitcher() {

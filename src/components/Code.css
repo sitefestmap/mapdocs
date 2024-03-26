@@ -1,3 +1,12 @@
+
+
+.code-container {
+    padding: 1rem;
+    background-color: var(--color-background);
+    border-radius: 0 5px 5px 5px;   
+    overflow-x: auto;
+}
+
 pre {
     margin: 1rem;
     padding: 1rem;
@@ -9,14 +18,8 @@ pre {
     line-height: 1.5;
 }
 
-.code-container {
-    padding: 1rem;
-    background-color: var(--color-background);
-    border-radius: 0 5px 5px 5px;   
-    overflow-x: auto;
-}
-
 code { 
+    
     p & { 
         color: var(--color-keyword);
     }
